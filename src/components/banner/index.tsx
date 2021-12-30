@@ -3,6 +3,7 @@ import { BannerContainer } from "./style";
 import BannerImage from "./../../assets/avatar.svg";
 import { Link } from "react-router-dom";
 import { ReactComponent as ArrowLeft } from "./../../assets/arrow-left.svg";
+import { ScrollDownSignal } from "../down-signal";
 
 export const Banner: FC = () => {
     return (
@@ -16,7 +17,7 @@ export const Banner: FC = () => {
                     digital products. From ideation to execution, I make great
                     user experiences with UI design.
                 </p>
-                <div>
+                <div className="arrow-text">
                     <p style={{ marginRight: "-20px" }}>
                         Learn more{" "}
                         <Link to="/">
@@ -29,6 +30,10 @@ export const Banner: FC = () => {
                         </Link>
                         <ArrowLeft />
                     </p>
+                </div>
+
+                <div className="scroll">
+                    <ScrollDownSignal />
                 </div>
             </div>
         </BannerContainer>

@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 export const BannerContainer = styled.div`
     background-color: var(--primary);
-    padding: 96px var(--side-pad);
+    padding: 230px var(--side-pad);
 
     @media (max-width: 1000px) {
-        padding: 72px var(--side-pad);
+        padding: 160px var(--side-pad);
     }
 
     @media (max-width: 480px) {
-        padding: 64px var(--side-pad);
+        padding: 130px var(--side-pad);
     }
     display: flex;
     justify-content: space-between;
@@ -38,6 +38,20 @@ export const BannerContainer = styled.div`
 
     div.texts {
         flex: 1;
+        position: relative;
+
+        div.scroll {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+            @media (max-width: 500px) {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                margin-top: 8px;
+            }
+        }
 
         h1 {
             background: linear-gradient(
@@ -91,7 +105,7 @@ export const BannerContainer = styled.div`
             }
         }
 
-        svg {
+        div.arrow-text svg {
             margin-top: -51px;
             margin-left: 20px;
 
