@@ -1,0 +1,9 @@
+:root {
+    --primary: #120024;
+    --secondary: #d6d93b;
+    --white: #ffffff;
+    --shade-1: rgba(155, 138, 171, 0.6);
+    --shade-2: rgba(155, 138, 171, 0.3);
+    --secondary-2: rgba(214, 217, 59, 0.2);
+    --side-pad: calc(0.09 * 100vw);
+}
