@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const BannerContainer = styled.div`
     background-color: var(--primary);
-    padding: 230px var(--side-pad);
+    padding: 180px var(--side-pad);
 
     @media (max-width: 1000px) {
         padding: 160px var(--side-pad);
