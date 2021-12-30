@@ -9,6 +9,10 @@ a {
     text-decoration: none;
 }
 
+a:hover,
+a:focus {
+    background-color: transparent;
+}
 ::-moz-selection {
     /* Code for Firefox */
     color: var(--primary);

@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
+import { Hamburger } from "./hamburger";
 import { IHeaderProps } from "./interface";
 import { HeaderContainer } from "./style";
 
@@ -38,6 +39,8 @@ export const Header: FC<IHeaderProps> = ({ curr }) => {
                     ))}
                 </nav>
             </div>
+
+            <Hamburger />
         </HeaderContainer>
     );
 };

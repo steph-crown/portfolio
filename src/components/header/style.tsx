@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
     background-color: var(--primary);
-    padding: 48px var(--side-pad);
+    padding: 40px var(--side-pad);
 
     @media (max-width: 480px) {
-        padding: 40px var(--side-pad);
+        padding: 32px var(--side-pad);
     }
 
     &,
