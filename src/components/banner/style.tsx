@@ -9,7 +9,7 @@ export const BannerContainer = styled.div`
     }
 
     @media (max-width: 480px) {
-        padding: 130px var(--side-pad);
+        padding: 130px var(--mob-side-pad);
     }
     display: flex;
     justify-content: space-between;

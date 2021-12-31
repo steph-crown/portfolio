@@ -9,7 +9,7 @@ export const HeaderContainer = styled.div`
     left: 0;
     z-index: 1;
     @media (max-width: 480px) {
-        padding: 32px var(--side-pad);
+        padding: 32px var(--mob-side-pad);
     }
 
     &,

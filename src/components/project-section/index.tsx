@@ -10,34 +10,47 @@ export const ProjectSection: FC = () => {
             image: studics,
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+            stacks: ["HTML", "CSS", "JAVASCRIPT"],
+            horizontal: true,
         },
+
         {
             name: "Studics Learning App",
             image: studics,
+            stacks: ["HTML", "CSS", "JAVASCRIPT"],
+            horizontal: false,
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
         },
         {
             name: "Studics Learning App",
             image: studics,
+            stacks: ["HTML", "CSS", "JAVASCRIPT"],
+            horizontal: false,
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
         },
         {
             name: "Studics Learning App",
             image: studics,
+            stacks: ["HTML", "CSS", "JAVASCRIPT"],
+            horizontal: true,
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
         },
         {
             name: "Studics Learning App",
             image: studics,
+            stacks: ["HTML", "CSS", "JAVASCRIPT"],
+            horizontal: false,
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
         },
         {
             name: "Studics Learning App",
             image: studics,
+            stacks: ["HTML", "CSS", "JAVASCRIPT"],
+            horizontal: false,
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
         },

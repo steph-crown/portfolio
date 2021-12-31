@@ -6,4 +6,6 @@
     --shade-2: rgba(155, 138, 171, 0.3);
     --secondary-2: rgba(214, 217, 59, 0.2);
     --side-pad: calc(0.09 * 100vw);
+
+    --mob-side-pad: calc(0.06 * 100vw);
 }
