@@ -36,13 +36,28 @@ export const ExperienceContainer = styled.div`
         margin-top: 1.5em;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 720px) {
         margin: 72px 0;
+        small {
+            font-size: 0.9em;
+        }
+        h2 {
+            font-size: 2.2em;
+            line-height: 160%;
+        }
+        p {
+            font-size: 1em;
+            margin-top: 1.25em;
+        }
+    }
+
+    @media (max-width: 500px) {
+        margin: 64px 0;
         small {
             font-size: 0.75em;
         }
         h2 {
-            font-size: 2em;
+            font-size: 1.875em;
             line-height: 160%;
         }
         p {

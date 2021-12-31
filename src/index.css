@@ -23,3 +23,29 @@ a:focus {
     color: var(--primary);
     background: var(--secondary);
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 8px;
+    background-color: var(--primary);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+    /* width: 9px; */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--secondary);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    opacity: 0.5;
+    background-color: rgba(214, 217, 59, 0.6);
+}

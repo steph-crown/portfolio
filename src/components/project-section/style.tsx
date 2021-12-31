@@ -25,6 +25,7 @@ export const ProjectSectionContainer = styled.div`
         margin-bottom: 24px;
         @media (max-width: 700px) {
             font-size: 3.5em;
+            margin-top: -24px;
         }
         @media (max-width: 480px) {
             font-size: 4.5em;

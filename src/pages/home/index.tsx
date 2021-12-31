@@ -3,6 +3,7 @@ import { Banner } from "../../components/banner";
 import { ExperienceSection } from "../../components/experience-section";
 import { Header } from "../../components/header";
 import { ProjectSection } from "../../components/project-section";
+import { SkillsSection } from "../../components/skills-section";
 // import { useHistory } from "react-router-dom";
 import { HomeContainer } from "./style";
 // import { gsap } from "gsap";
@@ -15,6 +16,7 @@ export const HomePage: FC = () => {
             <Banner />
             <ProjectSection />
             <ExperienceSection />
+            <SkillsSection />
         </HomeContainer>
     );
 };
