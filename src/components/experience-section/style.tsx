@@ -39,6 +39,14 @@ export const ExperienceSectionContainer = styled.div`
         width: 1px;
         border-radius: 20px;
         position: relative;
+        margin-right: 96px;
+
+        @media (max-width: 800px) {
+            margin-right: 64px;
+        }
+        @media (max-width: 480px) {
+            margin-right: 32px;
+        }
 
         div.scroll {
             width: 2px;
@@ -56,5 +64,7 @@ export const ExperienceSectionContainer = styled.div`
 
     div.experience-section {
         display: flex;
+        min-height: 2px;
+        /* align-items: center; */
     }
 `;
