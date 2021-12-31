@@ -9,3 +9,7 @@
 
     --mob-side-pad: calc(0.06 * 100vw);
 }
+
+body {
+    background-color: var(--primary);
+}

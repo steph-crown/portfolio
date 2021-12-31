@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Banner } from "../../components/banner";
 import { ExperienceSection } from "../../components/experience-section";
+import { Footer } from "../../components/footer";
 import { Header } from "../../components/header";
 import { ProjectSection } from "../../components/project-section";
 import { SkillsSection } from "../../components/skills-section";
@@ -17,6 +18,7 @@ export const HomePage: FC = () => {
             <ProjectSection />
             <ExperienceSection />
             <SkillsSection />
+            <Footer />
         </HomeContainer>
     );
 };
