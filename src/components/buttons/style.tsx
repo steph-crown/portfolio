@@ -28,9 +28,14 @@ export const ButtonContainer = styled.button`
     }
 
     &:hover {
+        background: transparent;
         &:before {
             width: 100%;
         }
+    }
+
+    &:focus {
+        background: transparent;
     }
 
     p {

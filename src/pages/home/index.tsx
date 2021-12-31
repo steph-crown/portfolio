@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { Banner } from "../../components/banner";
+import { ExperienceSection } from "../../components/experience-section";
 import { Header } from "../../components/header";
 import { ProjectSection } from "../../components/project-section";
 // import { useHistory } from "react-router-dom";
@@ -13,6 +14,7 @@ export const HomePage: FC = () => {
             <Header curr={[0, 1]} />
             <Banner />
             <ProjectSection />
+            <ExperienceSection />
         </HomeContainer>
     );
 };
