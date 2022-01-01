@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import { Pages } from "./routes";
 import styled from "styled-components";
+import { Grid } from "./components/grid";
 
 function App() {
     useEffect(() => {
@@ -27,6 +28,7 @@ function App() {
                     </a>
                 </div>
             </div>
+            <Grid />
         </AppContainer>
     );
 }

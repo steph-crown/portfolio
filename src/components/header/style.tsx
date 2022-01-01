@@ -1,13 +1,22 @@
 import styled from "styled-components";
+import { IHeaderContainerProps } from "./interface";
 
-export const HeaderContainer = styled.div`
-    background-color: var(--primary);
-    padding: 40px var(--side-pad);
+export const HeaderContainer = styled.div<IHeaderContainerProps>`
+    /* background-color: var(--primary); */
+    padding: ${(props) =>
+        props.isReduced ? "40px var(--side-pad)" : "60px var(--side-pad)"};
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
-    z-index: 1;
+    z-index: 3;
+    transition: 0.3s ease-out;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.05);
+    background: ${(props) =>
+        props.isReduced
+            ? "rgba(18, 0, 36, 0.9150980392156862)"
+            : "transparent"};
+
     @media (max-width: 480px) {
         padding: 32px var(--mob-side-pad);
     }

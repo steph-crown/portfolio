@@ -7,5 +7,5 @@ interface IHomeContainer extends HTMLDivElement {
 export const HomeContainer = styled.div.attrs<IHomeContainer>(
     (props: IHomeContainer) => ({ ref: props.ref })
 )`
-    background-color: var(--primary);
+    /* background-color: var(--primary); */
 `;

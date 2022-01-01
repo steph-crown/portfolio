@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Hamburger } from "./hamburger";
 import { IHeaderProps } from "./interface";
@@ -11,8 +11,18 @@ export const Header: FC<IHeaderProps> = ({ curr }) => {
         { name: "Resume", link: "/" },
         { name: "Contact Me", link: "/" },
     ];
+
+    const [reduceNav, setReduceNav] = useState<Boolean>(false);
+
+    useEffect(() => {
+        window.addEventListener("scroll", (e) => {
+            const scrollY = window.scrollY;
+            setReduceNav(scrollY > 10);
+        });
+    });
     return (
-        <HeaderContainer>
+        <HeaderContainer isReduced={reduceNav}>
+            {reduceNav && console.log(10)}
             <div className="flex">
                 <Link className="logo" to="/">
                     <h6 className="w">S</h6>
