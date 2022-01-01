@@ -60,8 +60,8 @@ export const ProjectSection: FC = () => {
             <h6>SELECTED PROJECTS</h6>
             <h1>Projects</h1>
             <div className="projects-container">
-                {projects.map((proj) => (
-                    <Project key={proj.name} {...proj} />
+                {projects.map((proj, index) => (
+                    <Project key={proj.name + index} {...proj} />
                 ))}
             </div>
         </ProjectSectionContainer>
