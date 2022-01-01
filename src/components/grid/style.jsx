@@ -11,6 +11,9 @@ export const GridContainer = styled.div`
         width: 100%;
         height: 100%;
         z-index: -2;
+        @media (max-width: 600px) {
+            grid-template-columns: repeat(5, 1fr);
+        }
     }
 
     .default-layout__bg span {
