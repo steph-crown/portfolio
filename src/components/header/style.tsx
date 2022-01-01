@@ -9,9 +9,10 @@ export const HeaderContainer = styled.div<IHeaderContainerProps>`
     top: 0;
     right: 0;
     left: 0;
-    z-index: 3;
+    z-index: 100;
     transition: 0.3s ease-out;
-    border-bottom: 1px solid hsla(0, 0%, 100%, 0.05);
+    border-bottom: ${(props) =>
+        props.isReduced ? "1px solid hsla(0, 0%, 100%, 0.05)" : "none"};
     background: ${(props) =>
         props.isReduced
             ? "rgba(18, 0, 36, 0.9150980392156862)"

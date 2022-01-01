@@ -1,5 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Menu } from "../menu";
 import { Hamburger } from "./hamburger";
 import { IHeaderProps } from "./interface";
 import { HeaderContainer } from "./style";
@@ -20,6 +21,8 @@ export const Header: FC<IHeaderProps> = ({ curr }) => {
             setReduceNav(scrollY > 10);
         });
     });
+
+    const [menuOpen, setMenuOpen] = useState<Boolean>(false);
     return (
         <HeaderContainer isReduced={reduceNav}>
             {reduceNav && console.log(10)}
@@ -50,7 +53,8 @@ export const Header: FC<IHeaderProps> = ({ curr }) => {
                 </nav>
             </div>
 
-            <Hamburger />
+            <Hamburger {...{ menuOpen, setMenuOpen }} />
+            <Menu {...{ menuOpen, setMenuOpen }} />
         </HeaderContainer>
     );
 };
