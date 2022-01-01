@@ -19,6 +19,7 @@ export const GridContainer = styled.div`
     .default-layout__bg span {
         background: #000624;
         background: rgba(24, 5, 41, 1);
+        height: calc(100vw / 5);
 
         display: block;
         border-radius: 10px;
