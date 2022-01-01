@@ -29,7 +29,12 @@ export const SkillsSectionContainer = styled.div`
             margin-top: -24px;
         }
         @media (max-width: 480px) {
-            font-size: 4.5em;
+            font-size: 3.5em;
+            margin-top: -20px;
+        }
+
+        @media (max-width: 290px) {
+            font-size: 3em;
             margin-top: -20px;
         }
     }

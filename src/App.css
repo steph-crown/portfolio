@@ -13,3 +13,122 @@
 body {
     background-color: var(--primary);
 }
+
+div.App {
+    position: relative;
+}
+div.App div.checkout {
+    position: absolute;
+    width: 3px;
+    background-color: white;
+    /* top: 40%; */
+    /* bottom: 40%; */
+    min-height: 20%;
+    /* left: var(--side-pad); */
+
+    cursor: pointer;
+    left: 0;
+    position: fixed;
+    z-index: 10;
+    width: 2px;
+    left: calc(0.04 * 100%);
+    height: 20vh;
+    background-color: #fff;
+    background-clip: padding-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-transition: all 0.5s cubic-bezier(0.32, -0.12, 0.16, 1.14);
+    -o-transition: all 0.5s cubic-bezier(0.32, -0.12, 0.16, 1.14);
+    transition: all 0.5s cubic-bezier(0.32, -0.12, 0.16, 1.14);
+}
+
+div.left-abs {
+    position: fixed;
+    background-color: var(--primary);
+    width: calc(0.04 * 100%);
+    left: 0;
+    top: 40vh;
+    height: 20vh;
+    z-index: 30;
+}
+
+div.redirect {
+    position: fixed;
+    color: white;
+    /* opacity: 0; */
+    z-index: 2;
+    position: fixed;
+    width: 400px;
+    left: -400px;
+    top: 40vh;
+    min-height: 20vh;
+    transition: left 1s cubic-bezier(0.32, -0.12, 0.16, 1.14);
+    -webkit-transition: left 1s cubic-bezier(0.32, -0.12, 0.16, 1.14);
+    -o-transition: left 1s cubic-bezier(0.32, -0.12, 0.16, 1.14);
+
+    background-color: #180529;
+    box-shadow: 0px -4px 22px rgba(0, 0, 0, 0.05),
+        4px 4px 19px rgba(0, 0, 0, 0.05);
+
+    color: white;
+    max-width: 90vw;
+    padding: 12px;
+    padding-right: 40px;
+    line-height: 180%;
+
+    /* transform: translateX(calc(-0.04 * 100vw)); */
+}
+
+div.redirect button {
+    background: none;
+    width: 16px;
+    height: 16px;
+    font-size: 1.8em;
+    color: #74717e;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 12px;
+    top: 0px;
+    cursor: pointer;
+}
+
+div.redirect button:hover {
+    background: none;
+    border: none;
+    outline: none;
+}
+div.show {
+    left: calc(0.04 * 100%);
+}
+
+div.redirect a {
+    color: var(--secondary);
+    position: relative;
+    display: inline-block;
+}
+
+div.redirect a span {
+    background-color: var(--secondary);
+    width: 0%;
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    left: 0;
+    transition: width 1s;
+}
+
+div.redirect a:hover span {
+    width: 100%;
+}
+div.App div.checkout:hover {
+    -webkit-transition: width 0.3s cubic-bezier(0.32, -0.12, 0.16, 1.14);
+    -o-transition: width 0.3s cubic-bezier(0.32, -0.12, 0.16, 1.14);
+    transition: width 0.3s cubic-bezier(0.32, -0.12, 0.16, 1.14);
+    width: 0.8rem;
+}
+@media (max-width: 600px) {
+    div.App div.checkout {
+        left: 8px;
+    }
+}
