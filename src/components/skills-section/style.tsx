@@ -47,7 +47,7 @@ export const SkillsSectionContainer = styled.div`
                 line-height: 174.9%;
                 /* or 35px */
 
-                letter-spacing: 0.08em;
+                letter-spacing: 0.04em;
 
                 color: #ffffff;
                 margin-bottom: 1.5em;

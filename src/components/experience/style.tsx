@@ -30,7 +30,7 @@ export const ExperienceContainer = styled.div`
         font-weight: normal;
         font-size: 18px;
         line-height: 28px;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.04em;
 
         color: #d1d1d1;
         margin-top: 1.5em;
