@@ -1,6 +1,5 @@
 import { FC, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu } from "../menu";
 import { Hamburger } from "./hamburger";
 import { IHeaderProps } from "./interface";
 import { HeaderContainer } from "./style";
