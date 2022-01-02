@@ -4,15 +4,13 @@ import { Menu } from "../menu";
 import { Hamburger } from "./hamburger";
 import { IHeaderProps } from "./interface";
 import { HeaderContainer } from "./style";
-
-export const Header: FC<IHeaderProps> = ({ curr }) => {
-    const navLinks: { name: string; link: string }[] = [
-        { name: "About", link: "/" },
-        { name: "Projects", link: "/" },
-        { name: "Resume", link: "/" },
-        { name: "Contact Me", link: "/" },
-    ];
-
+export const navLinks: { name: string; link: string }[] = [
+    { name: "About", link: "/" },
+    { name: "Projects", link: "/" },
+    { name: "Resume", link: "/" },
+    { name: "Contact Me", link: "/" },
+];
+export const Header: FC<IHeaderProps> = ({ curr, menuOpen, setMenuOpen }) => {
     const [reduceNav, setReduceNav] = useState<Boolean>(false);
 
     useEffect(() => {
@@ -22,7 +20,6 @@ export const Header: FC<IHeaderProps> = ({ curr }) => {
         });
     });
 
-    const [menuOpen, setMenuOpen] = useState<Boolean>(false);
     return (
         <HeaderContainer isReduced={reduceNav}>
             {reduceNav && console.log(10)}
@@ -54,7 +51,6 @@ export const Header: FC<IHeaderProps> = ({ curr }) => {
             </div>
 
             <Hamburger {...{ menuOpen, setMenuOpen }} />
-            <Menu {...{ menuOpen, setMenuOpen }} />
         </HeaderContainer>
     );
 };

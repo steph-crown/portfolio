@@ -54,14 +54,21 @@ export const BannerContainer = styled.div`
         }
 
         h1 {
-            background: linear-gradient(
-                90deg,
-                #ffffff 0%,
-                #d6d93b 35.29%,
-                #ffffff 78.31%
+            animation: animateBg 14s linear infinite;
+            background-image: linear-gradient(
+                0deg,
+                #c2bdeb,
+                #e6e981,
+                #b2aed5,
+                #d7d89d,
+                #bab8cc,
+                #c2bdeb,
+                #e7e987
             );
             color: transparent;
             background-clip: text;
+            background-size: 100% 600%;
+
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-size: 3.5em;
@@ -71,6 +78,14 @@ export const BannerContainer = styled.div`
 
             @media (max-width: 480px) {
                 font-size: 2.5em;
+            }
+        }
+        @keyframes animateBg {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 0%;
             }
         }
 

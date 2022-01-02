@@ -117,6 +117,7 @@ export const FooterContainer = styled.footer`
         div.socials {
             display: flex;
             margin-bottom: 1.2em;
+            flex-wrap: wrap;
 
             a {
                 display: block;
