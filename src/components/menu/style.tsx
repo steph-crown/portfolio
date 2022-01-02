@@ -63,9 +63,9 @@ export const MenuContainer = styled.div<{ menuOpen: Boolean }>`
         @media (max-width: 480px) {
             padding: 0px var(--mob-side-pad);
 
-            padding-top: 120px;
+            padding-top: 100px;
         }
-        padding-top: 120px;
+        padding-top: 100px;
 
         a {
             text-decoration: none;
@@ -76,7 +76,7 @@ export const MenuContainer = styled.div<{ menuOpen: Boolean }>`
                 width: -webkit-fit-content;
                 width: -moz-fit-content;
                 width: fit-content;
-                margin: 20px 0;
+                margin: 32px 0;
                 font-size: 5vw;
                 -webkit-transform: translateX(40px);
                 transform: translateX(40px);
@@ -91,7 +91,14 @@ export const MenuContainer = styled.div<{ menuOpen: Boolean }>`
                 }
                 @media (max-width: 600px) {
                     font-size: 2em;
-                    margin-left: 40px;
+                    margin-left: 80px;
+                    &:nth-child(2n) {
+                        margin-left: -20px;
+                    }
+                }
+                @media (max-width: 300px) {
+                    font-size: 2em;
+                    margin-left: 30px;
                     &:nth-child(2n) {
                         margin-left: -20px;
                     }
