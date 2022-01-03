@@ -20,8 +20,7 @@ export const Header: FC<IHeaderProps> = ({ curr, menuOpen, setMenuOpen }) => {
     });
 
     return (
-        <HeaderContainer isReduced={reduceNav}>
-            {reduceNav && console.log(10)}
+        <HeaderContainer isReduced={reduceNav} menuOpen={menuOpen}>
             <div className="flex">
                 <Link className="logo" to="/">
                     <h6 className="w">S</h6>

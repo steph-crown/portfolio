@@ -6,4 +6,5 @@ export interface IHeaderProps {
 
 export interface IHeaderContainerProps {
     isReduced?: Boolean;
+    menuOpen?: Boolean;
 }

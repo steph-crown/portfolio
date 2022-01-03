@@ -66,7 +66,9 @@ export const MenuContainer = styled.div<{ menuOpen: Boolean }>`
             padding-top: 100px;
         }
         padding-top: 100px;
-
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         a {
             text-decoration: none;
             pointer-events: ${(props) => (props.menuOpen ? "auto" : "none")};
@@ -76,34 +78,50 @@ export const MenuContainer = styled.div<{ menuOpen: Boolean }>`
                 width: -webkit-fit-content;
                 width: -moz-fit-content;
                 width: fit-content;
-                margin: 32px 0;
+                margin: 24px 0;
                 font-size: 5vw;
-                -webkit-transform: translateX(40px);
-                transform: translateX(40px);
+                /* -webkit-transform: translateX(40px); */
+                /* transform: translateX(40px); */
                 line-height: 1.4;
-                font-size: 4em;
+                font-size: 3em;
                 font-weight: 500;
                 position: relative;
-                margin-left: 200px;
+                margin-left: 100px;
 
                 &:nth-child(2n) {
-                    margin-left: 100px;
+                    margin-left: -100px;
                 }
                 @media (max-width: 600px) {
-                    font-size: 2em;
+                    font-size: 2.4em;
                     margin-left: 80px;
+                    margin: 20px 0;
+
                     &:nth-child(2n) {
-                        margin-left: -20px;
+                        margin-left: -80px;
                     }
                 }
                 @media (max-width: 300px) {
                     font-size: 2em;
                     margin-left: 30px;
                     &:nth-child(2n) {
-                        margin-left: -20px;
+                        margin-left: -30px;
                     }
                 }
-                &:after {
+                /* &:after {
+                    content: "";
+                    background-image: url(${line});
+                    background-position: 50%;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    height: 8px;
+                    width: 100%;
+                    position: absolute;
+                    bottom: 5px;
+                    right: 0;
+                    display: block;
+                } */
+
+                &.current:after {
                     content: "";
                     background-image: url(${line});
                     background-position: 50%;
@@ -117,9 +135,9 @@ export const MenuContainer = styled.div<{ menuOpen: Boolean }>`
                     display: block;
                 }
 
-                @media (max-width: 700px) {
+                /* @media (max-width: 700px) {
                     font-size: 3em;
-                }
+                } */
                 color: white;
                 font-family: Oswald;
                 /* background: linear-gradient(
@@ -152,6 +170,13 @@ export const MenuContainer = styled.div<{ menuOpen: Boolean }>`
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
+
+                &:hover {
+                    background: transparent;
+                    /* border: 1px solid white; */
+                    -webkit-text-stroke: 1px;
+                    -webkit-text-stroke-color: hsla(0, 0%, 100%, 0.678);
+                }
             }
 
             @keyframes animateBg {

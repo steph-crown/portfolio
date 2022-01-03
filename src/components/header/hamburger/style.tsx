@@ -5,17 +5,24 @@ export const HamburgerContainer = styled.div<{ menuOpen: Boolean }>`
     flex-direction: column;
     align-items: flex-end;
     width: 30px;
-    height: 25px;
+    height: 20px;
     justify-content: space-between;
     cursor: pointer;
     position: relative;
+    transition: transform 0.5s;
+
+    &:hover {
+        transform: scale(1.3);
+    }
+
     div {
-        height: 3px;
+        height: 2px;
         background-color: var(--white);
         width: 100%;
         /* margin-bottom: 6px; */
         border-radius: 8px;
         transition: 0.2s ease-out;
+
         position: ${(props) => (props.menuOpen ? "absolute" : "unset")};
 
         &:first-child {

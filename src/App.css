@@ -129,6 +129,6 @@ div.App div.checkout:hover {
 }
 @media (max-width: 600px) {
     div.App div.checkout {
-        left: 8px;
+        left: 10px;
     }
 }

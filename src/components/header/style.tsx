@@ -4,7 +4,9 @@ import { IHeaderContainerProps } from "./interface";
 export const HeaderContainer = styled.div<IHeaderContainerProps>`
     /* background-color: var(--primary); */
     padding: ${(props) =>
-        props.isReduced ? "40px var(--side-pad)" : "60px var(--side-pad)"};
+        props.isReduced && !props.menuOpen
+            ? "40px var(--side-pad)"
+            : "60px var(--side-pad)"};
     position: fixed;
     top: 0;
     right: 0;
@@ -12,7 +14,9 @@ export const HeaderContainer = styled.div<IHeaderContainerProps>`
     z-index: 100;
     transition: 0.3s ease-out;
     border-bottom: ${(props) =>
-        props.isReduced ? "1px solid hsla(0, 0%, 100%, 0.05)" : "none"};
+        props.isReduced && !props.menuOpen
+            ? "1px solid hsla(0, 0%, 100%, 0.05)"
+            : "none"};
     background: ${(props) =>
         props.isReduced
             ? "rgba(18, 0, 36, 0.9150980392156862)"
