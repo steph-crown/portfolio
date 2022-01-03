@@ -28,10 +28,11 @@ export const ExperienceSection: FC = () => {
                 "Along with other frontend developers, I developed the frontend of web applications in the different fields from fintech to health technology",
         },
     ];
+
     return (
         <ExperienceSectionContainer>
-            <h6>JOURNEY SO FAR ...</h6>
-            <h1>Experience</h1>
+            <h6 data-aos="fade-right">JOURNEY SO FAR ...</h6>
+            <h1 data-aos="fade-right">Experience</h1>
             <div className="experience-section">
                 <div className="line">
                     <div className="scroll"></div>

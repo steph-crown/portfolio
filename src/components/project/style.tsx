@@ -58,6 +58,7 @@ export const ProjectContainer = styled.div<IProjectStyles>`
             background-size: cover;
             background-position: 50%;
             object-position: top left;
+            display: flex;
         }
     }
 

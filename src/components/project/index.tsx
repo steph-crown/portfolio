@@ -10,18 +10,26 @@ export const Project: FC<IProjectProps> = ({
     stacks,
     horizontal,
 }) => {
+    // useEffect(() => {
+
+    //     return () => {
+
+    //     }
+    // }, [])
     return (
         <ProjectContainer horizontal={horizontal}>
             <div className="first">
-                <h2>{name}</h2>
-                <p>{description}</p>
-                <div className="stacks">
+                <h2 data-aos="fade-up">{name}</h2>
+                <p data-aos="fade-up">{description}</p>
+                <div data-aos="fade-up" className="stacks">
                     {stacks?.map((stack) => (
                         <Stack key={stack} name={stack} />
                     ))}
                 </div>
-
-                <Button>View Live</Button>
+                <div data-aos="fade-up">
+                    {" "}
+                    <Button>View Live</Button>
+                </div>
             </div>
             <div className="second">
                 <img src={image} alt={name} />

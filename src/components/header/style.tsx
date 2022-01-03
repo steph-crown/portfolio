@@ -6,7 +6,7 @@ export const HeaderContainer = styled.div<IHeaderContainerProps>`
     padding: ${(props) =>
         props.isReduced && !props.menuOpen
             ? "40px var(--side-pad)"
-            : "60px var(--side-pad)"};
+            : "54px var(--side-pad)"};
     position: fixed;
     top: 0;
     right: 0;
@@ -24,6 +24,11 @@ export const HeaderContainer = styled.div<IHeaderContainerProps>`
 
     @media (max-width: 480px) {
         padding: 32px var(--mob-side-pad);
+
+        padding: ${(props) =>
+            props.isReduced && !props.menuOpen
+                ? "32px var(--mob-side-pad)"
+                : "42px var(--mob-side-pad)"};
     }
 
     &,

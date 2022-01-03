@@ -57,8 +57,8 @@ export const ProjectSection: FC = () => {
     ];
     return (
         <ProjectSectionContainer>
-            <h6>SELECTED PROJECTS</h6>
-            <h1>Projects</h1>
+            <h6 data-aos="fade-right">SELECTED PROJECTS</h6>
+            <h1 data-aos="fade-right">Projects</h1>
             <div className="projects-container">
                 {projects.map((proj, index) => (
                     <Project key={proj.name + index} {...proj} />

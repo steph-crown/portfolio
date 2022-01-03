@@ -5,7 +5,7 @@ import { ReactComponent as DownIcon } from "./../../assets/chevron-down.svg";
 export const ScrollDownSignal: FC = () => {
     return (
         <ScrollDownSignalContainer>
-            <div className="line">
+            <div className="lining">
                 <div className="scroll"></div>
             </div>
             <div>

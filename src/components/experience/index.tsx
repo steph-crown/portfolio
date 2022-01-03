@@ -9,9 +9,9 @@ export const Experience: FC<IExperienceProps> = ({
 }) => {
     return (
         <ExperienceContainer>
-            <small>{date}</small>
-            <h2>{name}</h2>
-            <p>{description}</p>
+            <small data-aos="fade-up">{date}</small>
+            <h2 data-aos="fade-up">{name}</h2>
+            <p data-aos="fade-up">{description}</p>
         </ExperienceContainer>
     );
 };

@@ -27,12 +27,12 @@ export const Footer: FC = () => {
         <FooterContainer>
             <section>
                 <div className="fir">
-                    <h1>
+                    <h1 data-aos="fade-up">
                         LET'S BUILD
                         <br />
                         SOMETHING TOGETHER
                     </h1>
-                    <p>
+                    <p data-aos="fade-up">
                         Do you think I'd be a good companion for your next
                         adventure? Take a minute to tell me about your project,
                         or if you need some front-end development help, please
@@ -40,14 +40,16 @@ export const Footer: FC = () => {
                         front-end development projects.
                     </p>
                 </div>
-                <div className="sec">
+                <div className="sec" data-aos="fade-up">
                     <img src={left} alt="look left" />
                     <Button>Send Message</Button>
                 </div>
             </section>
-            <div className="hor-line"> </div>
+            <div className="hor-line" data-aos="fade-up">
+                {" "}
+            </div>
 
-            <div className="flexx">
+            <div className="flexx" data-aos="fade-up">
                 <div className="socials">
                     {socials.map((soc) => (
                         <a href={soc.link} key={soc.link}>

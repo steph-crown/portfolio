@@ -54,6 +54,7 @@ export const BannerContainer = styled.div`
         }
 
         h1 {
+            /* transform: translateY(-80px); */
             animation: animateBg 14s linear infinite;
             background-image: linear-gradient(
                 0deg,
@@ -73,11 +74,21 @@ export const BannerContainer = styled.div`
             -webkit-text-fill-color: transparent;
             font-size: 3.5em;
             line-height: 150%;
+
             font-family: Oswald;
+
             font-weight: 500;
 
             @media (max-width: 480px) {
-                font-size: 2.5em;
+                font-size: 3em;
+            }
+
+            @media (max-width: 340px) {
+                font-size: 2.6em;
+            }
+
+            @media (max-width: 300px) {
+                font-size: 2.4em;
             }
         }
         @keyframes animateBg {
@@ -85,7 +96,7 @@ export const BannerContainer = styled.div`
                 background-position: 0% 0%;
             }
             100% {
-                background-position: 100% 0%;
+                background-position: 100% 100%;
             }
         }
 

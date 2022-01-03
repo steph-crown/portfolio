@@ -5,7 +5,7 @@ export const ScrollDownSignalContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    div.line {
+    div.lining {
         background-color: var(--shade-1);
         height: 140px;
         width: 1px;
@@ -35,9 +35,9 @@ export const ScrollDownSignalContainer = styled.div`
             }
         }
     }
-    svg {
+    & div > svg {
         display: block;
-        stroke: currentColor;
+        /* stroke: currentColor; */
         color: white;
 
         &:first-child {

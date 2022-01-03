@@ -51,27 +51,27 @@ export const ButtonContainer = styled.button`
         align-items: center;
     }
 
-    svg {
+    div.arrows svg {
         display: block;
         stroke: currentColor;
         color: rgba(214, 217, 59, 1);
         height: 20px;
 
         &:first-child {
-            animation-name: first;
+            animation-name: firsts;
             animation-duration: 3s;
             animation-iteration-count: infinite;
             margin-right: -8px;
         }
 
         &:last-child {
-            animation-name: second;
+            animation-name: seconds;
             animation-duration: 3s;
             animation-iteration-count: infinite;
         }
     }
 
-    @keyframes first {
+    @keyframes firsts {
         0% {
             color: rgba(214, 217, 59, 0.2);
         }
@@ -83,7 +83,7 @@ export const ButtonContainer = styled.button`
         }
     }
 
-    @keyframes second {
+    @keyframes seconds {
         0% {
             color: rgba(214, 217, 59, 0.6);
         }
