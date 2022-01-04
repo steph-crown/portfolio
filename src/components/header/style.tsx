@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { IHeaderContainerProps } from "./interface";
 
 export const HeaderContainer = styled.div<IHeaderContainerProps>`
-    /* background-color: var(--primary); */
     padding: ${(props) =>
         props.isReduced && !props.menuOpen
             ? "40px var(--side-pad)"
@@ -51,12 +50,48 @@ export const HeaderContainer = styled.div<IHeaderContainerProps>`
             font-weight: 600;
             margin: 0 0.4px;
 
+            /* Animate logo on hover cubic-bezier(0.32, -0.12, 0.16, 1.14)*/
+            transition: transform 0.2s;
+            &:nth-child(10) {
+                transition-delay: 0.3s;
+            }
+            &:nth-child(9) {
+                transition-delay: 0.28s;
+            }
+            &:nth-child(8) {
+                transition-delay: 0.26s;
+            }
+            &:nth-child(7) {
+                transition-delay: 0.24s;
+            }
+            &:nth-child(6) {
+                transition-delay: 0.22s;
+            }
+            &:nth-child(5) {
+                transition-delay: 0.2s;
+            }
+            &:nth-child(4) {
+                transition-delay: 0.18s;
+            }
+            &:nth-child(3) {
+                transition-delay: 0.16s;
+            }
+            &:nth-child(2) {
+                transition-delay: 0.14s;
+            }
+            &:nth-child(1) {
+                transition-delay: 0.12s;
+            }
             &.y {
                 color: var(--secondary);
             }
             &.space-left {
                 margin-left: 6px;
             }
+        }
+
+        &:hover h6 {
+            transform: translateX(10px);
         }
     }
 

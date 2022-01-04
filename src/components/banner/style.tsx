@@ -59,9 +59,9 @@ export const BannerContainer = styled.div`
             background-image: linear-gradient(
                 0deg,
                 #c2bdeb,
-                #e6e981,
+                #dee25d,
                 #b2aed5,
-                #d7d89d,
+                #c4c56a,
                 #bab8cc,
                 #c2bdeb,
                 #e7e987
