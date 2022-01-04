@@ -1,13 +1,18 @@
 import { FC } from "react";
 import { ProjectSectionContainer } from "./style";
-import studics from "./../../assets/studics.png";
+import cv from "./../../assets/cv.png";
+import hifast from "./../../assets/hifast.png";
+import newfolio from "./../../assets/new-folio.png";
+import oldFolio from "./../../assets/old-folio.png";
+import quiz from "./../../assets/quiz.png";
+import velocity from "./../../assets/velocity.png";
 import { Project } from "../project";
 
 export const ProjectSection: FC = () => {
     const projects = [
         {
-            name: "Studics Learning App",
-            image: studics,
+            name: "Hifast landing Page",
+            image: hifast,
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
             stacks: ["HTML", "CSS", "JAVASCRIPT"],
@@ -16,7 +21,7 @@ export const ProjectSection: FC = () => {
 
         {
             name: "Studics Learning App",
-            image: studics,
+            image: velocity,
             stacks: ["HTML", "CSS", "JAVASCRIPT"],
             horizontal: false,
             description:
@@ -24,7 +29,7 @@ export const ProjectSection: FC = () => {
         },
         {
             name: "Studics Learning App",
-            image: studics,
+            image: oldFolio,
             stacks: ["HTML", "CSS", "JAVASCRIPT"],
             horizontal: false,
             description:
@@ -32,7 +37,7 @@ export const ProjectSection: FC = () => {
         },
         {
             name: "Studics Learning App",
-            image: studics,
+            image: newfolio,
             stacks: ["HTML", "CSS", "JAVASCRIPT"],
             horizontal: true,
             description:
@@ -40,7 +45,7 @@ export const ProjectSection: FC = () => {
         },
         {
             name: "Studics Learning App",
-            image: studics,
+            image: cv,
             stacks: ["HTML", "CSS", "JAVASCRIPT"],
             horizontal: false,
             description:
@@ -48,7 +53,7 @@ export const ProjectSection: FC = () => {
         },
         {
             name: "Studics Learning App",
-            image: studics,
+            image: quiz,
             stacks: ["HTML", "CSS", "JAVASCRIPT"],
             horizontal: false,
             description:

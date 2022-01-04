@@ -20,6 +20,11 @@ export const FooterContainer = styled.footer`
     margin-bottom: 0;
     padding-bottom: 56px;
 
+    @media (max-width: 1000px) {
+        padding: 2.5em;
+        padding-bottom: 28px;
+    }
+
     @media (max-width: 480px) {
         padding: 1.5em;
         padding-bottom: 28px;

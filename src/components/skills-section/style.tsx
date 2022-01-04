@@ -25,11 +25,11 @@ export const SkillsSectionContainer = styled.div`
         margin-top: -40px;
         margin-bottom: 24px;
         @media (max-width: 700px) {
-            font-size: 3.5em;
+            font-size: 6em;
             margin-top: -24px;
         }
         @media (max-width: 480px) {
-            font-size: 3.5em;
+            font-size: 4em;
             margin-top: -20px;
         }
 
