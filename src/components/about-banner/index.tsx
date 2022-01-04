@@ -6,7 +6,6 @@ import { ReactComponent as Roller1 } from "./../../assets/roller-1.svg";
 // import { ReactComponent as ArrowLeft } from "./../../assets/arrow-left.svg";
 import { ScrollDownSignal } from "../down-signal";
 import { Button } from "../buttons";
-import { Footer } from "../footer";
 
 export const AboutBanner: FC = () => {
     const h1Ref = useRef<HTMLHeadingElement>(null);
