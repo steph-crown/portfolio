@@ -6,12 +6,13 @@ import { Grid } from "./components/grid";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import AnimatedCursor from "react-animated-cursor";
 
 function App() {
     useEffect(() => {
         return () => {};
     }, []);
-    const [show, setshow] = useState<boolean>(false);
+    const [show, setshow] = useState(false);
     return (
         <AppContainer>
             <div className="App">
@@ -32,6 +33,7 @@ function App() {
                 </div>
             </div>
             <Grid />
+            <AnimatedCursor color="255, 255, 255" innerSize={12} />
         </AppContainer>
     );
 }

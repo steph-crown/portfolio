@@ -1,4 +1,5 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
+import { useHistory } from "react-router";
 import { Banner } from "../../components/banner";
 import { ExperienceSection } from "../../components/experience-section";
 import { Footer } from "../../components/footer";
@@ -13,15 +14,34 @@ import { HomeContainer } from "./style";
 
 export const HomePage: FC = () => {
     const [menuOpen, setMenuOpen] = useState<Boolean>(false);
+    // For scroll internal linking
 
+    const history = useHistory();
+    useEffect(() => {
+        const hash = history.location.hash;
+        // Check if there is a hash and if an element with that id exists
+        const el = hash && document.getElementById(hash.substr(1));
+        if (el) {
+            el.scrollIntoView({ behavior: "smooth" });
+        } else {
+            window.scrollTo(0, 0);
+        }
+    }, [history.location.hash]); // Fires every time hash changes
+
+    // useEffect(() => {
+    // }, []);
     return (
         <HomeContainer>
             <Header curr={[0]} {...{ menuOpen, setMenuOpen }} />
             <Banner />
-            <ProjectSection />
+            <div id="projects">
+                <ProjectSection />
+            </div>
             <ExperienceSection />
             <SkillsSection />
-            <Footer />
+            <div id="footer">
+                <Footer />
+            </div>
             <Menu {...{ menuOpen, setMenuOpen }} curr={[0]} />
         </HomeContainer>
     );

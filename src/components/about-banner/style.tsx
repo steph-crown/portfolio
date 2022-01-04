@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const BannerContainer = styled.div`
+export const AboutBannerContainer = styled.div`
     /* background-color: var(--primary); */
     padding: 180px var(--side-pad);
 
@@ -14,9 +14,51 @@ export const BannerContainer = styled.div`
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: 820px) {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+
+    div.image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 45%;
+        max-width: 500px;
+
+        & > svg {
+            animation: spin 6s linear infinite;
+            -webkit-animation: spin 6s linear infinite;
+
+            &:hover {
+                animation-play-state: paused;
+            }
+
+            @keyframes spin {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+
+        @media (max-width: 1000px) {
+            max-width: 420px;
+        }
+
+        @media (max-width: 820px) {
+            max-width: 100%;
+            width: auto;
+
+            display: none;
+        }
+    }
+
     img {
         height: 500px;
-        margin-right: 110px;
+        /* margin-right: 110px; */
 
         @media (max-width: 1000px) {
             height: 420px;
@@ -131,13 +173,13 @@ export const BannerContainer = styled.div`
             }
         }
 
-        div.arrow-text svg {
+        /* div.arrow-text svg {
             margin-top: -51px;
             margin-left: 20px;
 
             @media (max-width: 500px) {
                 height: 40px;
             }
-        }
+        } */
     }
 `;

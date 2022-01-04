@@ -13,10 +13,16 @@
 body {
     background-color: var(--primary);
 }
-
+/* Fake cursor */
 div.App {
     position: relative;
+    /* cursor: none; */
 }
+/* div.App svg.cursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
 div.App div.checkout {
     position: absolute;
     width: 3px;
@@ -108,7 +114,7 @@ div.redirect a {
     display: inline-block;
 }
 
-div.redirect a span {
+a span {
     background-color: var(--secondary);
     width: 0%;
     position: absolute;
@@ -118,7 +124,11 @@ div.redirect a span {
     transition: width 1s;
 }
 
-div.redirect a:hover span {
+a {
+    position: relative;
+}
+
+a:hover > span {
     width: 100%;
 }
 div.App div.checkout:hover {

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ButtonContainer = styled.button`
+export const ButtonContainer = styled.button<{ style: any }>`
     background-color: transparent;
     display: flex;
     justify-content: center;
@@ -42,6 +42,9 @@ export const ButtonContainer = styled.button`
         font-size: 16px;
         font-weight: 600;
         margin-right: 4px;
+        margin-top: 0 !important;
+        line-height: unset !important;
+        color: var(--secondary) !important;
     }
 
     div.arrows {

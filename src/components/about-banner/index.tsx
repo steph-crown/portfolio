@@ -1,10 +1,12 @@
 import { FC, useEffect, useRef, useState } from "react";
-import { BannerContainer } from "./style";
+import { AboutBannerContainer } from "./style";
 import BannerImage from "./../../assets/avatar.svg";
-import { Link } from "react-router-dom";
-import { ReactComponent as ArrowLeft } from "./../../assets/arrow-left.svg";
+import { ReactComponent as Roller1 } from "./../../assets/roller-1.svg";
+// import { Link } from "react-router-dom";
+// import { ReactComponent as ArrowLeft } from "./../../assets/arrow-left.svg";
 import { ScrollDownSignal } from "../down-signal";
-// import { gsap } from "gsap";
+import { Button } from "../buttons";
+import { Footer } from "../footer";
 
 export const AboutBanner: FC = () => {
     const h1Ref = useRef<HTMLHeadingElement>(null);
@@ -13,33 +15,29 @@ export const AboutBanner: FC = () => {
     // const sel = gsap.utils.selector(divRef);
     // const timeline = useRef<any>(null);
 
-    const message: string = "Hey There, Meet Steph Crown.";
+    const message: string = "Hello World...";
     const [messageShown, setMessageShown] = useState<string>("");
     const [messageIndex, setMessageIndex] = useState<number>(1);
 
     useEffect(() => {
-        // timeline.current = gsap.timeline().to(sel("span:first-child"), {
-        //     translateY: 40,
-        // });
-        // .to(sel("span"), {
-        //     x: 100,
-        // });
-
         const interval: any = setInterval(() => {
             setMessageShown(message.slice(0, messageIndex));
             if (messageIndex <= 27) {
                 setMessageIndex((prev) => prev + 1);
             }
         }, 100);
-        
 
         return () => {
             clearInterval(interval);
         };
     }, [messageIndex]);
     return (
-        <BannerContainer>
-            <img src={BannerImage} alt="Steph Crown" />
+        <AboutBannerContainer>
+            <div className="image">
+                <img src={BannerImage} alt="Steph Crown" />
+                <Roller1 />
+            </div>
+
             <div className="texts" ref={divRef}>
                 <h1 ref={h1Ref}>
                     {" "}
@@ -49,35 +47,46 @@ export const AboutBanner: FC = () => {
                     <span>Steph</span> <span>Crown</span> */}
                 </h1>
                 <p data-aos="fade-up">
-                    {/* I'm a UX designer based in Lagos, Nigeria (for now) with 1+
-                    years of experience in delivering end to end designs for
-                    digital products. From ideation to execution, I make great
-                    user experiences with UI design. */}
-                    I am frontend developer based in Lagos, Nigeria with 2+
-                    years of developing mobile responsive, user-friendly web
-                    application frontends. From using CSS to implement pixel
-                    perfect designs to utilizing frontend frameworks to consume
-                    API,I make great web user interface experience for users.
+                    I'm a driven frontend developer who specializes in
+                    developing intuitive web user interfaces and seamless user
+                    experiences. I frequently assist in the identification and
+                    resolution of complicated challenges using data-driven
+                    procedures that transform business objectives into reality
+                    while emphasizing empathy for the user.{" "}
+                </p>{" "}
+                <p data-aos="fade-up">
+                    {" "}
+                    I'm passionate about creating user-centric, entertaining,
+                    and human web experiences.
                 </p>
-                <div className="arrow-text">
-                    <p style={{ marginRight: "-20px" }} data-aos="fade-up">
-                        Learn more{" "}
-                        <Link to="/">
-                            about me <span></span>
-                        </Link>{" "}
-                        or jump straight to{" "}
-                        <Link to="/">
-                            {" "}
-                            my work <span></span>
-                        </Link>
-                        <ArrowLeft />
-                    </p>
-                </div>
-
+                <p data-aos="fade-up">
+                    In my 2+ years of hands-on experience and a never-ending
+                    desire for knowledge and self-improvement, I have developed
+                    key values like as speed, accuracy, inventiveness, and
+                    responsiveness to milestones. My goal is to gain more
+                    experience and expertise in my field, and to find a job that
+                    allows me to grow my knowledge and fully utilize my
+                    knowledge, practice, and abilities, all while ensuring
+                    result-oriented efforts to increase organizational
+                    productivity.
+                </p>
+                <p data-aos="fade-up">
+                    I appreciate debating and exchanging ideas and perspectives
+                    that help us learn more. We should ask more questions to
+                    strengthen our coding skills.
+                </p>
+                <a
+                    data-aos="fade-up"
+                    href="mailto:emmanuelstephen024@gmail.com"
+                >
+                    <Button style={{ width: "160px", marginTop: "5em" }}>
+                        Get in Touch
+                    </Button>
+                </a>
                 <div className="scroll">
                     <ScrollDownSignal />
                 </div>
             </div>
-        </BannerContainer>
+        </AboutBannerContainer>
     );
 };

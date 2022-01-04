@@ -42,7 +42,9 @@ export const Footer: FC = () => {
                 </div>
                 <div className="sec" data-aos="fade-up">
                     <img src={left} alt="look left" />
-                    <Button>Send Message</Button>
+                    <a href="mailto:emmanuelstephen024@gmail.com">
+                        <Button>Send Message</Button>
+                    </a>
                 </div>
             </section>
             <div className="hor-line" data-aos="fade-up">

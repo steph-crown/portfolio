@@ -4,11 +4,11 @@ import { Hamburger } from "./hamburger";
 import { IHeaderProps } from "./interface";
 import { HeaderContainer } from "./style";
 export const navLinks: { name: string; link: string }[] = [
-    { name: "Projects", link: "/" },
-    { name: "About", link: "/" },
+    { name: "Projects", link: "/#projects" },
+    { name: "About", link: "/about" },
 
     { name: "Resume", link: "/" },
-    { name: "Contact Me", link: "/" },
+    { name: "Contact Me", link: "/#footer" },
 ];
 export const Header: FC<IHeaderProps> = ({ curr, menuOpen, setMenuOpen }) => {
     const [reduceNav, setReduceNav] = useState<Boolean>(false);
@@ -44,6 +44,7 @@ export const Header: FC<IHeaderProps> = ({ curr, menuOpen, setMenuOpen }) => {
                             className={curr.includes(index) ? "current" : ""}
                         >
                             {link.name}
+                            <span></span>
                         </Link>
                     ))}
                 </nav>
