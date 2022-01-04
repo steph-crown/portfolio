@@ -4,6 +4,7 @@ export interface IProjectProps {
     image: any;
     stacks?: string[];
     horizontal: boolean;
+    link: string;
 }
 
 export interface IStackProps {

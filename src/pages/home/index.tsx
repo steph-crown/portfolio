@@ -16,13 +16,13 @@ export const HomePage: FC = () => {
 
     return (
         <HomeContainer>
-            <Header curr={[0, 1]} {...{ menuOpen, setMenuOpen }} />
+            <Header curr={[0]} {...{ menuOpen, setMenuOpen }} />
             <Banner />
             <ProjectSection />
             <ExperienceSection />
             <SkillsSection />
             <Footer />
-            <Menu {...{ menuOpen, setMenuOpen }} curr={[0, 1]} />
+            <Menu {...{ menuOpen, setMenuOpen }} curr={[0]} />
         </HomeContainer>
     );
 };

@@ -9,6 +9,7 @@ export const Project: FC<IProjectProps> = ({
     description,
     stacks,
     horizontal,
+    link,
 }) => {
     // useEffect(() => {
 
@@ -28,7 +29,10 @@ export const Project: FC<IProjectProps> = ({
                 </div>
                 <div data-aos="fade-up">
                     {" "}
-                    <Button>View Live</Button>
+                    <a href={link}>
+                        {" "}
+                        <Button>View Live</Button>
+                    </a>
                 </div>
             </div>
             <div className="second">
