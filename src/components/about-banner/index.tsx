@@ -33,7 +33,7 @@ export const AboutBanner: FC = () => {
     return (
         <AboutBannerContainer>
             <div className="image">
-                <img src={BannerImage} alt="Steph Crown" />
+                <img src={BannerImage} data-aos="fade-up" alt="Steph Crown" />
                 <Roller1 />
             </div>
 

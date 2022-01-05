@@ -48,7 +48,7 @@ export const Banner: FC = () => {
     }, [messageIndex]);
     return (
         <BannerContainer>
-            <img src={BannerImage} alt="Steph Crown" />
+            <img src={BannerImage} alt="Steph Crown" data-aos="fade-up" />
             <div className="texts" ref={divRef}>
                 <h1 ref={h1Ref}>
                     {" "}

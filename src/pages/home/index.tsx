@@ -1,7 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import { Banner } from "../../components/banner";
-import { ExperienceSection } from "../../components/experience-section";
 import { Footer } from "../../components/footer";
 import { Header } from "../../components/header";
 import { Menu } from "../../components/menu";
@@ -37,7 +36,6 @@ export const HomePage: FC = () => {
             <div id="projects">
                 <ProjectSection />
             </div>
-            <ExperienceSection />
             <SkillsSection />
             <div id="footer">
                 <Footer />

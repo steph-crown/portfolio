@@ -1,8 +1,9 @@
 import { FC, useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import { AboutBanner } from "../../components/about-banner";
+import { ExperienceSection } from "../../components/experience-section";
 import { Footer } from "../../components/footer";
-import { FunFact } from "../../components/fun-fact";
+// import { FunFact } from "../../components/fun-fact";
 import { Header } from "../../components/header";
 import { Menu } from "../../components/menu";
 import { AboutPageContainer } from "./style";
@@ -25,7 +26,9 @@ export const AboutPage: FC = () => {
         <AboutPageContainer>
             <Header curr={[1]} {...{ menuOpen, setMenuOpen }} />
             <AboutBanner />
-            <FunFact />
+            {/* <FunFact /> */}
+            <ExperienceSection />
+
             <Footer />
 
             <Menu {...{ menuOpen, setMenuOpen }} curr={[1]} />
