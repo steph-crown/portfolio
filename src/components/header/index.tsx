@@ -7,7 +7,7 @@ export const navLinks: { name: string; link: string }[] = [
     { name: "Projects", link: "/#projects" },
     { name: "About", link: "/about" },
 
-    { name: "Resume", link: "/" },
+    { name: "Resume", link: "/resume.pdf" },
     { name: "Contact Me", link: "/#footer" },
 ];
 export const Header: FC<IHeaderProps> = ({ curr, menuOpen, setMenuOpen }) => {
@@ -37,16 +37,32 @@ export const Header: FC<IHeaderProps> = ({ curr, menuOpen, setMenuOpen }) => {
                     <h6 className="y">N</h6>
                 </Link>
                 <nav className="flex">
-                    {navLinks.map((link, index) => (
-                        <Link
-                            key={link.name}
-                            to={link.link}
-                            className={curr.includes(index) ? "current" : ""}
-                        >
-                            {link.name}
-                            <span></span>
-                        </Link>
-                    ))}
+                    {navLinks.map((link, index) =>
+                        index !== 2 ? (
+                            <Link
+                                key={link.name}
+                                to={link.link}
+                                className={
+                                    curr.includes(index) ? "current" : ""
+                                }
+                            >
+                                {link.name}
+                                <span></span>
+                            </Link>
+                        ) : (
+                            <a
+                                key={link.name}
+                                href="/resume.pdf"
+                                className={
+                                    curr.includes(index) ? "current" : ""
+                                }
+                                target={"_blank"}
+                            >
+                                {link.name}
+                                <span></span>
+                            </a>
+                        )
+                    )}
                 </nav>
             </div>
 
