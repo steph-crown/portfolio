@@ -36,7 +36,11 @@ function App() {
                         <button onClick={() => setshow(false)}>&times;</button>
                         🎉 Yaaay, you saw this. I am also a visual designer so I
                         thought to show you my design portfolio.{" "}
-                        <a href="https://stephcrown.vercel.app">
+                        <a
+                            href="https://design.stephcrown.com"
+                            target={"_blank"}
+                            rel="noreferrer"
+                        >
                             Click here to go ahead <span></span>
                         </a>
                     </div>
