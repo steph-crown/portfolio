@@ -15,15 +15,28 @@ export const Menu: FC<IHeaderProps> = ({ menuOpen, curr }) => {
                 {console.log(menuOpen)}
             </div>
             <div className="menu-links">
-                {navLinks.map((link, index) => (
-                    <Link
-                        key={link.name}
-                        to={link.link}
-                        className={curr.includes(index) ? "current" : ""}
-                    >
-                        {link.name}
-                    </Link>
-                ))}
+                {navLinks.map((link, index) =>
+                    index !== 2 ? (
+                        <Link
+                            key={link.name}
+                            to={link.link}
+                            className={curr.includes(index) ? "current" : ""}
+                        >
+                            {link.name}
+                            <span></span>
+                        </Link>
+                    ) : (
+                        <a
+                            key={link.name}
+                            href="/resume.pdf"
+                            className={curr.includes(index) ? "current" : ""}
+                            target={"_blank"}
+                        >
+                            {link.name}
+                            <span></span>
+                        </a>
+                    )
+                )}
             </div>
         </MenuContainer>
     );
