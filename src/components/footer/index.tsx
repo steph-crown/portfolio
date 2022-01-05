@@ -41,7 +41,7 @@ export const Footer: FC = () => {
                     </p>
                 </div>
                 <div className="sec" data-aos="fade-up">
-                    <img src={left} alt="look left" />
+                    <img src={left} alt="look left Steph Crown" />
                     <a href="mailto:emmanuelstephen024@gmail.com">
                         <Button>Send Message</Button>
                     </a>

@@ -36,7 +36,7 @@ export const Project: FC<IProjectProps> = ({
                 </div>
             </div>
             <div className="second">
-                <img src={image} alt={name} />
+                <img src={image} alt={name + " Steph Crown Portfolio"} />
             </div>
         </ProjectContainer>
     );
