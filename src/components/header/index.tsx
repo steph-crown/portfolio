@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import { Hamburger } from "./hamburger";
 import { IHeaderProps } from "./interface";
 import { HeaderContainer } from "./style";
-export const navLinks: { name: string; link: string }[] = [
+export const navLinks: { name: string; link: string; outside?: boolean }[] = [
     { name: "Projects", link: "/#projects" },
+    { name: "Blog", link: "https://blog.stephcrown.com", outside: true },
     { name: "About", link: "/about" },
 
     { name: "Resume", link: "/resume.pdf" },
@@ -39,16 +40,22 @@ export const Header: FC<IHeaderProps> = ({ curr, menuOpen, setMenuOpen }) => {
                 <nav className="flex">
                     {navLinks.map((link, index) =>
                         index !== 2 ? (
-                            <Link
-                                key={link.name}
-                                to={link.link}
-                                className={
-                                    curr.includes(index) ? "current" : ""
-                                }
-                            >
-                                {link.name}
-                                <span></span>
-                            </Link>
+                            link.outside ? (
+                                <a key={link.name} href={link.link}>
+                                    {link.name}
+                                </a>
+                            ) : (
+                                <Link
+                                    key={link.name}
+                                    to={link.link}
+                                    className={
+                                        curr.includes(index) ? "current" : ""
+                                    }
+                                >
+                                    {link.name}
+                                    <span></span>
+                                </Link>
+                            )
                         ) : (
                             <a
                                 key={link.name}

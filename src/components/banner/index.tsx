@@ -10,7 +10,7 @@ export const Banner: FC = () => {
     const h1Ref = useRef<HTMLHeadingElement>(null);
     const divRef = useRef<HTMLDivElement>(null);
 
-    const message: string = "Hey There, Meet Steph Crown.";
+    const message: string = "Hello World, Meet Steph Crown.";
     const [messageShown, setMessageShown] = useState<string>("");
     const [messageIndex, setMessageIndex] = useState<number>(1);
 
