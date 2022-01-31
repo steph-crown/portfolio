@@ -1,6 +1,7 @@
 import { FC, useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import { Banner } from "../../components/banner";
+import { BlogBanner } from "../../components/blog-banner";
 import { Footer } from "../../components/footer";
 import { Header } from "../../components/header";
 import { Menu } from "../../components/menu";
@@ -37,6 +38,7 @@ export const HomePage: FC = () => {
                 <ProjectSection />
             </div>
             <SkillsSection />
+            <BlogBanner />
             <div id="footer">
                 <Footer />
             </div>

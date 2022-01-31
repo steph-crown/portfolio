@@ -1,6 +1,7 @@
 import { FC, useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import { AboutBanner } from "../../components/about-banner";
+import { BlogBanner } from "../../components/blog-banner";
 import { ExperienceSection } from "../../components/experience-section";
 import { Footer } from "../../components/footer";
 // import { FunFact } from "../../components/fun-fact";
@@ -28,6 +29,8 @@ export const AboutPage: FC = () => {
             <AboutBanner />
             {/* <FunFact /> */}
             <ExperienceSection />
+
+            <BlogBanner />
 
             <Footer />
 
