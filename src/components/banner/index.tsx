@@ -10,37 +10,17 @@ export const Banner: FC = () => {
     const h1Ref = useRef<HTMLHeadingElement>(null);
     const divRef = useRef<HTMLDivElement>(null);
 
-    // const sel = gsap.utils.selector(divRef);
-    // const timeline = useRef<any>(null);
-
     const message: string = "Hey There, Meet Steph Crown.";
     const [messageShown, setMessageShown] = useState<string>("");
     const [messageIndex, setMessageIndex] = useState<number>(1);
 
     useEffect(() => {
-        // timeline.current = gsap.timeline().to(sel("span:first-child"), {
-        //     translateY: 40,
-        // });
-        // .to(sel("span"), {
-        //     x: 100,
-        // });
-
         const interval: any = setInterval(() => {
             setMessageShown(message.slice(0, messageIndex));
             if (messageIndex <= 27) {
                 setMessageIndex((prev) => prev + 1);
             }
         }, 100);
-        // animate h1
-        // gsap.to(h1Ref.current, {
-        //     translateY: 0,
-        //     ease: "elastic",
-        //     duration: 2.2,
-        // });
-        // timeline.current = gsap
-        //     .timeline()
-        //     .from(sel("p"), { translateY: 40, scrollTrigger:  });
-        // gsap.to()
 
         return () => {
             clearInterval(interval);
@@ -54,14 +34,8 @@ export const Banner: FC = () => {
                     {" "}
                     {messageShown}
                     <span></span>
-                    {/* <span>Hey</span> <span>There,</span> <span>Meet</span>{" "}
-                    <span>Steph</span> <span>Crown</span> */}
                 </h1>
                 <p data-aos="fade-up">
-                    {/* I'm a UX designer based in Lagos, Nigeria (for now) with 1+
-                    years of experience in delivering end to end designs for
-                    digital products. From ideation to execution, I make great
-                    user experiences with UI design. */}
                     I am frontend developer based in Lagos, Nigeria with 2+
                     years of developing mobile responsive, user-friendly web
                     application frontends. From using CSS to implement pixel

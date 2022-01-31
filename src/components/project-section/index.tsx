@@ -44,7 +44,7 @@ export const ProjectSection: FC = () => {
         {
             name: "Current Portfolio",
             image: newfolio,
-            stacks: ["REACT JS", "CSS", "AOS", "GSAP"],
+            stacks: ["REACT JS", "CSS", "AOS", "TYPESCRIPT"],
             horizontal: true,
             description:
                 "This is what you are currently viewing 😊. I thought I needed to develop a new portfolio, designing it from scratch before coding it out. Made sure it is all-device-responsive, and added some cool transitions with CSS",
