@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ButtonContainer = styled.button<{ style: any }>`
+export const ButtonContainer = styled.button<{ style: any; dark?: boolean }>`
     background-color: transparent;
     display: flex;
     justify-content: center;
@@ -10,7 +10,7 @@ export const ButtonContainer = styled.button<{ style: any }>`
     height: 50px;
     outline: none;
     border: none;
-    color: var(--secondary);
+    color: ${(props) => (props.dark ? "var(--primary)" : "var(--secondary)")};
     position: relative;
     cursor: pointer;
 
@@ -23,6 +23,8 @@ export const ButtonContainer = styled.button<{ style: any }>`
         width: 32px;
         height: 50px;
         background: rgba(214, 217, 59, 0.27);
+        background: ${(props) =>
+            props.dark ? "rgba(18,0,36, 0.27)" : "rgba(214, 217, 59, 0.27)"};
         border-radius: 5px;
         transition: width 1s cubic-bezier(0.24, 0.97, 0.75, 0.2);
     }
@@ -44,7 +46,10 @@ export const ButtonContainer = styled.button<{ style: any }>`
         margin-right: 4px;
         margin-top: 0 !important;
         line-height: unset !important;
-        color: var(--secondary) !important;
+        color: ${(props) =>
+            props.dark
+                ? "var(--primary) !important"
+                : "var(--secondary) !important"};
     }
 
     div.arrows {
@@ -57,7 +62,8 @@ export const ButtonContainer = styled.button<{ style: any }>`
     div.arrows svg {
         display: block;
         stroke: currentColor;
-        color: rgba(214, 217, 59, 1);
+        color: ${(props) =>
+            props.dark ? "rgba(18,0,36, 1)" : "rgba(214, 217, 59, 1)"};
         height: 20px;
 
         &:first-child {

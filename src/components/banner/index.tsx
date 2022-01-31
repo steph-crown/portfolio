@@ -17,7 +17,7 @@ export const Banner: FC = () => {
     useEffect(() => {
         const interval: any = setInterval(() => {
             setMessageShown(message.slice(0, messageIndex));
-            if (messageIndex <= 27) {
+            if (messageIndex <= 32) {
                 setMessageIndex((prev) => prev + 1);
             }
         }, 100);

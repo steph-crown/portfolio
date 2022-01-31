@@ -8,9 +8,12 @@ export const BlogBanner = () => {
                 I have a blog where I write about frontend development and UX
                 design
             </h3>
-            <a href={"https://blog.stephcrown.com"}>
+            <a
+                href={"https://blog.stephcrown.com"}
+                style={{ marginTop: "2em", display: "inline-block" }}
+            >
                 {" "}
-                <Button>View Blog</Button>
+                <Button dark={true}>View Blog</Button>
             </a>
         </BlogBannerContainer>
     );
