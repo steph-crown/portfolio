@@ -13,16 +13,7 @@ import { IProjectProps } from "../project/interface";
 
 export const ProjectSection: FC = () => {
     const projects: IProjectProps[] = [
-        {
-            name: "Hifast landing Page",
-            image: hifast,
-            description:
-                "This is the landing page for a mobile application that allows you to deposit and withdraw cash and crypto assets with Hifast, explore a world of boundless opportunities and get unlimited access to a better financial experience",
-            stacks: ["REACT JS", "CSS"],
-            horizontal: true,
-            link: "https://hi-fast.netlify.app/",
-        },
-
+   
         {
             name: "Velocity - Games",
             image: velocity,
